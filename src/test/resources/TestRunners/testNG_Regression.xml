@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OpenCart Test Suite" thread-count="2" parallel="tests">
+	<listeners>
+		<listener class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener" />
+	</listeners>
+	
+	<test name="OpenCart_LoginPage Test">
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest">
+			<methods>
+				<include name = "loginPageTitleTest" />
+			</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
