@@ -49,6 +49,7 @@ public class LoginPageTest extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority=4)
 	public void registerLinkTest() {
+		System.out.println("changed for GIT ");
 		Assert.assertTrue(loginPage.isRegistrationLinkExist());
 	}
 	
