@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
  *This class contains all the browser options which user/tester want to use while running the scripts
  *These options should not be used directly in DriverFactory class as will violate the SRP (Single responsibility Principal) 
  *Driver factory is used to initialize the driver with given prop parameters 
- *OptionsManager will manage all browser related capabilities/options, create an object of this class and use it in Driver Factory
+ *OptionsManager will manage all browser related capabilities/options, create an object of this class in Driver Factory and then use it's state and behaviour 
  *
  */ 
 public class OptionsManager {
