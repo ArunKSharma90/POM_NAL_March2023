@@ -17,6 +17,7 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		eleUtil = new ElementUtil(driver);
+		
 	}
 
 //	3. Create By locators
@@ -28,7 +29,7 @@ public class LoginPage {
 	private By loginErrorMsg = By.cssSelector("div.alert.alert-danger.alert-dismissible");
 
 //	4. Page Actions/Behaviors/Functionalities
-	@Step("getting login page title....")
+	@Step("getting login page title.....")
 	public String getLoginPageTitle() {
 //		return driver.getTitle();
 		return eleUtil.waitForTitleContains(Constants.LOGIN_PAGE_TITLE, Constants.DEFAULT_TIME_OUT);
