@@ -17,7 +17,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<extentreports-version>5.0.9</extentreports-version>
-		<aspectj.version>1.9.16</aspectj.version>
+		<aspectj.version>1.8.10</aspectj.version>
 	</properties>
 
 	<dependencies>
@@ -100,8 +100,9 @@
 		</dependency>
 
 	</dependencies>
-
+	
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -112,23 +113,25 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
-			<configuration>
+
+				<configuration>
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
-					<argLine>-Xmx4096m -XX:MaxPermSize=256m</argLine>
+					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testrunners/testNG_Regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
-					<!-- <argLine>
+					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine> -->
-				</configuration>
+					</argLine>
 
+				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -137,6 +140,13 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
+
+
 	</build>
-</project>
+
+
+	
+
+	</project>

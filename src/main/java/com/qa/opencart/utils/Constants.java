@@ -8,7 +8,7 @@ import java.util.List;
  * this class is for maintaining the Constants values required for testing  
  */
 public class Constants {
-	public static final String LOGIN_PAGE_TITLE = "Account Login11" ;
+	public static final String LOGIN_PAGE_TITLE = "Account Login" ;
 	public static final String LOGIN_PAGE_URL_FRACTION = "route=account/login" ;
 	public static final int DEFAULT_TIME_OUT = 5 ;
 	public static final String ACCOUNT_PAGE_TITLE = "My Account";
