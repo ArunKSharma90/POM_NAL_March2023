@@ -36,7 +36,7 @@ pipeline
         }
                 
      
-        stage('Publibat Allure Reports') {
+        stage('Publish Allure Reports') {
            steps {
                 script {
                     allure([
@@ -51,7 +51,7 @@ pipeline
         }
         
         
-        stage('Publibat Extent Report'){
+        stage('Publish Extent Report'){
             steps{
                      publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
