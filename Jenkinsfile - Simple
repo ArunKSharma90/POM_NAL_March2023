@@ -1,0 +1,42 @@
+
+pipeline {
+    agent any 
+    
+    stages {
+        stage('Build') { 
+            steps {
+                    echo ("Build") 
+            }
+        }
+        stage('Run Unit Tests') { 
+            steps {
+                   echo ("Run Unit Tests")  
+            }
+        }
+        stage('Deploy to Dev') { 
+            steps {
+                        echo ("dev deployment")
+            }
+        }
+        stage('Deploy to QA') { 
+            steps {
+                        echo ("QA deployment")
+            }
+        }
+        stage('Run Automation Reg Test') { 
+            steps {
+                        echo ("Run Automation Reg Test")
+            }
+        }
+        stage('Deploy to PreProd') { 
+            steps {
+                        echo ("Deploy to PreProd")
+            }
+        }
+        stage('Deploy to Prod') { 
+            steps {
+                        echo ("Deploy to Prod")
+            }
+        }
+    }
+}
