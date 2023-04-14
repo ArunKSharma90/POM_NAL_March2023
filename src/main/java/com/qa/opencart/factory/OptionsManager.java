@@ -20,6 +20,8 @@ public class OptionsManager {
 	public ChromeOptions co; 
 	public FirefoxOptions fo;
 	public EdgeOptions eo;
+	public String browserName = prop.getProperty("browser");
+	public String browserVersion = prop.getProperty("browserversion");
 	
 	public OptionsManager(Properties prop) {
 		this.prop = prop;
@@ -27,6 +29,14 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOptions() {
 		ChromeOptions co = new ChromeOptions();
+		if (Boolean.parseBoolean(prop.getProperty("remote")) == true) {
+			co.setCapability("browserName", "chrome");
+			co.setCapability("browserVersion", browserVersion);
+			co.setCapability("enableVNC", true);
+			
+		}
+		
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless").toLowerCase())) {
 			co.addArguments("--headless");
 		}
